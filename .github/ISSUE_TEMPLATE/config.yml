@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / Discussion
+    url: https://github.com/PedroCamargo-dev/laxy-services/discussions
+    about: For questions and general discussion, please use Discussions instead of Issues.
