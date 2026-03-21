@@ -26,7 +26,8 @@ if [ -z "$LATEST" ]; then
   exit 1
 fi
 
-FILE="${BIN}_${LATEST}_${OS}_${ARCH}.tar.gz"
+VERSION="${LATEST#v}"
+FILE="${BIN}_${VERSION}_${OS}_${ARCH}.tar.gz"
 URL="https://github.com/$REPO/releases/download/$LATEST/$FILE"
 
 echo "installing $BIN $LATEST ($OS/$ARCH) → $DEST/$BIN"
