@@ -5,11 +5,11 @@ REPO="PedroCamargo-dev/laxy-services"
 BIN="laxy-services"
 DEST="${INSTALL_DIR:-/usr/local/bin}"
 
-OS=$(uname -s | tr '[:upper:]' '[:lower:]')
-case "$OS" in
-  linux|darwin) ;;
-  *) echo "unsupported OS: $OS" >&2; exit 1 ;;
-esac
+if [ "$(uname -s)" != "Linux" ]; then
+  echo "laxy-services requires Linux with systemd — $(uname -s) is not supported" >&2
+  exit 1
+fi
+OS="linux"
 
 ARCH=$(uname -m)
 case "$ARCH" in

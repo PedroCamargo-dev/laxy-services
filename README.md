@@ -47,20 +47,16 @@ Downloads and installs the latest pre-built binary for your architecture (`amd64
 
 ### Download manually
 
-Grab a pre-built binary from the [Releases](https://github.com/PedroCamargo-dev/laxy-services/releases/latest) page:
+Grab the archive for your platform from the [Releases](https://github.com/PedroCamargo-dev/laxy-services/releases/latest) page:
 
 | Platform | File |
 |----------|------|
-| Linux x86-64 | `laxy-services-linux-amd64` |
-| Linux ARM64  | `laxy-services-linux-arm64` |
-| macOS Intel  | `laxy-services-darwin-amd64` |
-| macOS Apple Silicon | `laxy-services-darwin-arm64` |
-
-> **Note:** macOS binaries are provided for completeness but will not function — systemd and D-Bus are Linux-only. The tool requires a Linux system with systemd to operate.
+| Linux x86-64 | `laxy-services_<version>_linux_amd64.tar.gz` |
+| Linux ARM64  | `laxy-services_<version>_linux_arm64.tar.gz` |
 
 ```bash
-chmod +x laxy-services-linux-amd64
-sudo mv laxy-services-linux-amd64 /usr/local/bin/laxy-services
+tar -xzf laxy-services_*_linux_amd64.tar.gz
+sudo mv laxy-services /usr/local/bin/
 ```
 
 ### From source
